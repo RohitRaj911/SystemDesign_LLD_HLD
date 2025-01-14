@@ -1,11 +1,11 @@
-public class Movie {
+public class Movies {
     private String name;
     private Float ratings=0.0f;
     private Language language;
     private Genre genre;
 
     //Constructor
-    public Movie(String name, Language language, Genre genre) {
+    public Movies(String name, Language language, Genre genre) {
         this.name = name;
         this.language = language;
         this.genre = genre;

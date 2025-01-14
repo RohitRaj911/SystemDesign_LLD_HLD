@@ -1,13 +1,13 @@
 import java.util.Date;
 
-public class Show {
+public class Shows {
     private int id;
     private Date showTime;
     private int availableSeats;
 
-    private Movie movie;
-    private Theater theater;
-    public Show(int id, Date showTime, Movie movie, Theater theater) {
+    Movies movie;
+    private Theaters theater;
+    public Shows(int id, Date showTime, Movies movie, Theaters theater) {
         this.id = id;
         this.showTime = showTime;
         this.movie = movie;
@@ -33,16 +33,16 @@ public class Show {
     public void setAvailableSeats(int availableSeats) {
         this.availableSeats = availableSeats;
     }
-    public Movie getMovie() {
+    public Movies getMovie() {
         return movie;
     }
-    public void setMovie(Movie movie) {
+    public void setMovie(Movies movie) {
         this.movie = movie;
     }
-    public Theater getTheater() {
+    public Theaters getTheater() {
         return theater;
     }
-    public void setTheater(Theater theater) {
+    public void setTheater(Theaters theater) {
         this.theater = theater;
     }
 

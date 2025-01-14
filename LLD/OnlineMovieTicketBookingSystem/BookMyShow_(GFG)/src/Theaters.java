@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
-public class Theater {
+public class Theaters {
     private int id;
     private String name;
     private String location;
     private int capacity;
     
-    private ArrayList<Show> shows;
+    private ArrayList<Shows> shows;
 
     //Constructor
     //new theater will have emty list of shows
-    public Theater(int id, String name, String location, int capacity) {
+    public Theaters(int id, String name, String location, int capacity) {
         this.id = id;
         this.name = name;
         this.location = location;
@@ -50,11 +50,11 @@ public class Theater {
         this.capacity = capacity;
     }
 
-    public ArrayList<Show> getShows() {
+    public ArrayList<Shows> getShows() {
         return shows;
     }
 
-    public void setShows(ArrayList<Show> shows) {
+    public void setShows(ArrayList<Shows> shows) {
         this.shows = shows;
     }
     

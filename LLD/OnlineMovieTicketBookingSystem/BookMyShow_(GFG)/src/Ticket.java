@@ -6,9 +6,9 @@ public class Ticket {
     private String theater;
     private int numberOfSeats;
 
-    private Show bookedShow;
+    private Shows bookedShow;
 
-    public Ticket(int id, Date bookingTime, String theater, int numberOfSeats, Show bookedShow) {
+    public Ticket(int id, Date bookingTime, String theater, int numberOfSeats, Shows bookedShow) {
         this.id = id;
         this.bookingTime = bookingTime;
         this.theater = theater;
@@ -40,11 +40,11 @@ public class Ticket {
         this.numberOfSeats = numberOfSeats;
     }
 
-    public Show getBookedShow() {
+    public Shows getBookedShow() {
         return bookedShow;
     }
 
-    public void setBookedShow(Show bookedShow) {
+    public void setBookedShow(Shows bookedShow) {
         this.bookedShow = bookedShow;
     }
 
