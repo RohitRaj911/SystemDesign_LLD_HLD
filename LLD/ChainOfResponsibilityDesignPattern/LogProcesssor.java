@@ -10,9 +10,7 @@ public abstract class LogProcesssor {
     }
     public void log(int logLevel, String message){
         if(nextLogProcesssor!=null){
-            System.out.println("BEFORE::  "+nextLogProcesssor.toString());
             nextLogProcesssor.log(logLevel, message);
-            System.out.println("AFTER::  "+nextLogProcesssor.toString());
         }
     }
 }
