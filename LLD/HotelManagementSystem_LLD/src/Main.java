@@ -1,8 +1,8 @@
-package Hotel;
+package src;
 
-import Billing.BaseRoom;
 import Billing.RoomServiceFactoryLayer;
-import Billing.StandardRoom;  // Assume this is a concrete BaseRoom
+import Billing.Rooms.BaseRoom;
+import Billing.Rooms.StandardRoom;
 
 //SERVICES ARE FOLLOWING DECORATOR+FACTORY PATTERN
 //SERVICES INCLUDES ORDER FOOD ITEMS + CLEANING CLOTHES

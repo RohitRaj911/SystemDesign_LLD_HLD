@@ -1,4 +1,4 @@
-package Billing;
+package Billing.Rooms;
 
 public class SuiteRoom extends BaseRoom{
     @Override

@@ -1,7 +1,7 @@
-package Food;
+package Billing.Food;
 
 import Billing.ExtraService;
-import Billing.BaseRoom;
+import Billing.Rooms.BaseRoom;
 
 public abstract class Food extends ExtraService {  // Now properly calls superclass constructor
 

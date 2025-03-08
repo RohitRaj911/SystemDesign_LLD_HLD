@@ -1,6 +1,6 @@
-package Food;
+package Billing.Food;
 
-import Billing.BaseRoom;
+import Billing.Rooms.BaseRoom;
 
 public class WaterBottle extends Food{
     public WaterBottle(BaseRoom room) {

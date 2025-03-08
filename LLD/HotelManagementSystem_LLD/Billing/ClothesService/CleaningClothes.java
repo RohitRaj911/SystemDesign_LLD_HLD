@@ -1,7 +1,7 @@
-package ClothesService;
+package Billing.ClothesService;
 
-import Billing.BaseRoom;
 import Billing.ExtraService;
+import Billing.Rooms.BaseRoom;
 
 public class CleaningClothes extends ExtraService{
     int clothesCount;

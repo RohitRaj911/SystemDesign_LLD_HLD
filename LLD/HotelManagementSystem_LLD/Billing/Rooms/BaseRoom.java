@@ -1,4 +1,4 @@
-package Billing;
+package Billing.Rooms;
 
 import Hotel.RoomType;
 
