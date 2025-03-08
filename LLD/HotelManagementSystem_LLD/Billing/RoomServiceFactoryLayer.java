@@ -1,25 +1,31 @@
 package Billing;
 
-import Billing.ClothesService.CleaningClothes;
-import Billing.Food.Milk;
-import Billing.Food.Paneer;
-import Billing.Food.WaterBottle;
+import java.util.HashMap;
+import java.util.Map;
+
 import Billing.Rooms.BaseRoom;
 
-public abstract class RoomServiceFactoryLayer{
+public class RoomServiceFactoryLayer{
+    private static final Map<String, Integer> roomService = new HashMap<>();
+    
+    static {
+        // Food services
+        roomService.put("MILK", 30);
+        roomService.put("PANEER", 200);
+        roomService.put("WATERBOTTLE", 20);
 
-    public static BaseRoom provideService(BaseRoom room, String service, int quantity){
-        switch (service.toUpperCase()) {
-            case "MILK" :
-                return new Milk(room);  
-            case "PANEER" :
-                return new Paneer(room);
-            case "WATERBOTTLE" :
-                return new WaterBottle(room);
-            case "CLEANING_CLOTHES" :
-                return new CleaningClothes(room, quantity);           
-            default:
-                throw new IllegalArgumentException("Service item not available: "+ service);
-        }       
+        // Extra services
+        roomService.put("CLEANING_CLOTHES", 50); // ₹50 per cloth
+    }
+
+    public static BaseRoom addService(BaseRoom room, String serviceType, int quantity) {
+        serviceType = serviceType.toUpperCase(); // Ensure case-insensitivity
+        
+        if (!roomService.containsKey(serviceType)) {
+            throw new IllegalArgumentException("Service not available: " + serviceType);
+        }
+
+        int totalCost = roomService.get(serviceType) * quantity; // Handle quantity-based services
+        return new ExtraService(room, serviceType, totalCost);
     }
 }

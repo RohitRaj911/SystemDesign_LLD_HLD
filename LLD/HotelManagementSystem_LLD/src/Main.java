@@ -12,9 +12,9 @@ public class Main {
         BaseRoom standardRoom = new StandardRoom();
 
         // Add service items dynamically
-        standardRoom = RoomServiceFactoryLayer.provideService(standardRoom, "MILK",0);
-        standardRoom = RoomServiceFactoryLayer.provideService(standardRoom, "PANEER",0);
-        standardRoom = RoomServiceFactoryLayer.provideService(standardRoom, "CLEANING_CLOTHES", 5);
+        standardRoom = RoomServiceFactoryLayer.addService(standardRoom, "MILK",1);
+        standardRoom = RoomServiceFactoryLayer.addService(standardRoom, "PANEER",1);
+        standardRoom = RoomServiceFactoryLayer.addService(standardRoom, "CLEANING_CLOTHES", 5);
         
         // Get final charges
         System.out.println("Total charges: ₹" + standardRoom.getCharges());

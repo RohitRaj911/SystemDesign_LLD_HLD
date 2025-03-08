@@ -2,10 +2,20 @@ package Billing;
 
 import Billing.Rooms.BaseRoom;
 
-public abstract class ExtraService extends BaseRoom{
-    protected BaseRoom room;
-    public ExtraService(BaseRoom room){
+public class ExtraService extends BaseRoom{
+    protected final BaseRoom room;
+    private final String serviceName;
+    private final int cost;
+    
+    public ExtraService(BaseRoom room, String serviceName, int cost) {
         this.room = room;
+        this.serviceName = serviceName;
+        this.cost = cost;
     }
-    public abstract int getCharges();
+    public int getCharges(){
+        return room.getCharges() + cost;
+    }
+    public String getServiceName(){
+        return serviceName;
+    }
 }
